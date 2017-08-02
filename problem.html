@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <title>问题集锦</title>
+    <style>
+        a{
+            color: #76daff;
+        }
+    </style>
+</head>
+<body>
+<div class="index_nav clearfloat">
+    <a href="index.html">花枝招展的猪</a>
+    <ul>
+        <li><a href="#">个人作品</a></li>
+        <li><a href="problem.html">小小经验</a></li>
+        <li><a href="dzw.html">爱豆日记</a></li>
+        <li><a href="aboutMe.html">关于作者</a></li>
+
+    </ul>
+</div>
+<div class="container">
+    <h2 style="text-align: center">
+        手机端_关于文档显示问题
+    </h2>
+    <p style="text-align: right">作者：kandy；时间：2017-08-02</p>
+    <p style="text-indent: 32px">
+        问题前情：最近在做一个webApp的项目，是嵌套在别的App里面的页面，但是页面和pc端页面内容是关联的，pc端上面上传的文档手机页面也要显示（例如.doc\.xls\.pdf），那么问题来了，放在手机端的a标签里面写好的文档路径，ios系统的手机打开就直接可以显示文档内容，大家也都是知道的ios里面有内置的webview，但是安卓手机问题就来了，点击之后系统直接默认提示已经下载到本地，需要在手机里面的文档里面找到文件再使用wps类似文件打开才可以。
+    </p>
+
+    <p style="text-indent: 32px">
+        是否解决：已经解决。
+        <br/>
+        因为开发的并不是app所以不能像开发app那样直接又调取用户手机插件的api，本身又是前端的项目所以只能考虑使用js去尝试。
+        <br/>
+        对于想.doc\.xls这样的文件打开一直没有找到好的解决方法，看论坛有人直接去调取office的api属性，但是现在在手机上面使用无法确定用户是否安装了这些软件，且手机端一直使用wps不是office所以一直尝试没有成功
+    </p>
+
+    <p style="text-indent: 32px">
+        但是对于.pdf这种特殊文件还是有方法的。
+        <br/>
+        HTML里面有一个特殊标签，“< object >”这种标签可以放一些特殊的文件。详情 <a href="http://www.w3school.com.cn/tags/tag_object.asp">w3c详细接受object标签</a>
+        这个确实可以显示pdf文件，pc端完美实现，但是放在手机端还是有问题的，安卓照样不行，苹果一如既往的可以显示。
+    </p>
+
+    <p style="text-indent: 32px">
+        哈哈，结果发现了一个申请的js名字pdf.js。官网是在GitHub上面更新的有兴趣的可以看看，<a href="https://github.com/mozilla/pdf.js/">pdf.js GitHub地址</a>
+        说明解释也是英文，建议先看看介绍文档然后在尝试里面example里面的小例子。
+        <br/>
+        <b>重点提示:</b>在GitHub更新一直很多年了，如果你直接下载master里面的文档尝试看demo会报一堆错误，各种文件not
+        found，所以建议去下载前几个版本，GitHub里面有tag切换，自己找个之前的版本下载看demo就好了。
+        <br/>
+        推荐几个关于pdf.js的博客，都是很好的例子。
+        <br/>
+        <a href="http://www.51purse.com/pdf/web/demo1.html">demo1</a>   这个例子打开之后pdf显示是固定宽高不能滑动，因为没有viewer页面显示控件<br/>
+        <a href="http://www.51purse.com/pdf/web/demo2.html">demo2</a>   这个例子在手机端也是可以正常显示的，并且切换显示比例等的小功能也是有的 <br/>
+    </p>
+</div>
+<div style="text-indent: 32px" class="container">
+
+    注：说话断断续续没有什么逻辑，望包涵，如果您觉得我有什么地方的知识点有错误请指正，谢谢您嘞。
+    <br/>
+    <p style="text-indent: 32px">
+        联系方式：请关注微博:Wuli-小狮子，私信留言。
+    </p>
+
+</div>
+</body>
+</html>
