@@ -5,7 +5,7 @@
   padding: 10px;
 }
 b {
-  color: #E22018 ;
+  color: #E22018;
 }
 .index_nav {
   width: 100%;
@@ -25,4 +25,106 @@ b {
 }
 .index_nav ul li:hover {
   background-color: #333333;
+}
+.header-background {
+  background-image: url("../img/banner1.jpg");
+  background-size: 100%;
+  background-size: cover;
+  background-position-x: 50%;
+  /*position: absolute;*/
+  overflow: hidden;
+  /*top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;*/
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 750px;
+  /*margin-top: -50px;*/
+}
+.title {
+  text-align: left;
+  max-width: 900px;
+  z-index: 1000;
+  margin: 0 auto;
+  padding: 0 1.25em;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.title  h1 {
+        padding: 0 0 .2em;
+        color: #fff;
+        /*font-weight: 800;*/
+        margin: 0 auto;
+    }
+.intro-box{
+	max-width: 700px;
+	margin: 0 auto;
+}
+.intro-box header{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 1mm;
+}
+.intro-box .leftbox{
+	width: 60%;
+	
+}
+.intro-box .leftbox a{
+	float: left;
+	width: 100%;
+}
+.intro-box .leftbox img{
+		width: 87%;
+    max-width: 270px;
+    max-height: 216px;
+    float: right;
+    transition: opacity .35s,transform .25s ease-in-out;
+}
+.intro-box .leftbox img:hover{
+	/*opacity: .8;*/
+	transform: scale(1.1);
+}
+.intro-box .leftbox .leftbox-top1,.intro-box .leftbox .leftbox-top2{
+	padding-left: 40px;
+	padding-top: 40px;
+	margin-top: 40px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+	border: 1px solid #B4B4B4;
+	border-radius: 10px;
+}
+.intro-box .leftbox .leftbox-top2{
+	margin-top: 80px;
+}
+.intro-box .rightbox{
+	width: 40%;
+	/*background-color:#76DAFF;*/
+}
+.intro-box .rightbox a{
+	float: left;
+	width: 100%;
+}
+.intro-box .rightbox img{
+		max-width: 210px;
+    max-height: 124px;
+    transition: opacity .35s,transform .25s ease-in-out;
+}
+.intro-box .rightbox img:hover{
+	/*opacity: .8;*/
+	transform: scale(1.1);
+}
+.intro-box .rightbox .rightbox-top1,.intro-box .rightbox .rightbox-top2,.intro-box .rightbox .rightbox-top3{
+	padding-left: 40px;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	margin-top: 40px;
+	margin-left: 20px;
+	border: 1px solid #B4B4B4;
+	border-radius: 10px;
 }
