@@ -13,6 +13,11 @@ b {
   line-height: 50px;
   background-color: #666666;
 }
+.fixpos{
+	position: fixed;
+	z-index: 100;
+	
+}
 .index_nav a {
   color: #fff;
   display: block;
@@ -26,8 +31,12 @@ b {
 .index_nav ul li:hover {
   background-color: #333333;
 }
+.index_nav ul li.active{
+	background-color: #333333;
+}
 .header-background {
-  background-image: url("../img/banner1.jpg");
+	background-attachment:scroll;
+  background-image: url("../img/dzw_banner.jpg");
   background-size: 100%;
   background-size: cover;
   background-position-x: 50%;

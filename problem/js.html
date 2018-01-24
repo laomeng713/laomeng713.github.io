@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<title>js问题集锦</title>
+		<style type="text/css">
+			.tabs-vertical {
+				font: bold 13px sans-serif;
+				background-color: #f7f7f7;
+				box-shadow: 0 0 22px #E2E2E2 inset, 2px 2px 3px #E8E8E8;
+				border: 1px solid #CECECE;
+				margin: 30px auto 30px;
+				max-width: 980px;
+				text-align: center;
+				border-radius: 2px;
+			}
+			/* The tabs */
+			
+			.tabs-vertical ul {
+				float: left;
+				list-style: none;
+				text-align: left;
+				margin: 0;
+				padding-left: 0;
+			}
+			
+			.tabs-vertical ul li {
+				margin-right: -1px;
+			}
+			
+			.tabs-vertical ul li a {
+				display: block;
+				text-decoration: none;
+				color: #656a6d;
+				border: 1px solid transparent;
+				border-right: 0;
+				border-left: 0;
+				padding: 16px 40px 16px 20px;
+			}
+			
+			.tabs-vertical ul li a.tab-active {
+				border-color: #dddddd;
+				background-color: #ffffff;
+				box-shadow: 0px 2px 0px #EFEFEF;
+			}
+			
+			.tabs-vertical ul li:first-child a {
+				border-top: 0;
+			}
+			/* The content */
+			
+			.tabs-vertical .tabs-content-placeholder {
+				overflow: hidden;
+				border-left: 1px solid #dddddd;
+				font-weight: normal;
+				background-color: #fff;
+				padding: 20px 40px 45px;
+				margin: 0 auto;
+				box-shadow: -3px 0 0px #F3F3F3;
+				text-align: center;
+			}
+			
+			.tabs-vertical .tabs-content-placeholder div {
+				display: none;
+			}
+			
+			.tabs-vertical .tabs-content-placeholder div.tab-content-active {
+				display: block;
+			}
+			
+			.tabs-vertical .tabs-content-placeholder div p {
+				color: #565a5c;
+				line-height: 1.5;
+				text-align: left;
+				margin: 5px 0 20px;
+			}
+			
+			.tabs-vertical .tabs-content-placeholder div img {
+				max-width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="index_nav clearfloat">
+			<a href="../index.html">花枝招展的猪</a>
+			<ul>
+				<li>
+					<a href="#">个人作品</a>
+				</li>
+				<li class="active">
+					<a href="../problemIndex.html">小小经验</a>
+				</li>
+				<li>
+					<a href="../dzw.html">爱豆日记</a>
+				</li>
+				<li>
+					<a href="../aboutMe.html">关于作者</a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="tabs-vertical">
+
+			<ul>
+				<li>
+					<a class="tab-active" data-index="0" href="#">数组</a>
+				</li>
+				<li>
+					<a data-index="1" href="#">对象</a>
+				</li>
+				<li>
+					<a data-index="2" href="#">字符串</a>
+				</li>
+			</ul>
+
+			<div class="tabs-content-placeholder">
+
+				<div class="tab-content-active">
+					<p>Tabs Information 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus facilis excepturi optio tempore mollitia reprehenderit quam repellendus a consectetur cum sequi tenetur at pariatur adipisci modi hic necessitatibus sit enim!
+					</p>
+					<img src="../images/1.jpg"/>
+				</div>
+
+				<div>
+					<p>Tabs Information 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis tempore est neque delectus dolores repellat praesentium harum illo nulla perferendis libero pariatur sed nobis eaque accusamus laudantium nemo eligendi temporibus!
+					</p>
+					<img src="../images/1.jpg"/>
+				</div>
+
+				<div>
+					<p>Tabs Information 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aut aliquid neque iste reiciendis culpa quas laudantium perferendis ut exercitationem accusantium nihil porro. Delectus voluptas dicta ipsam quo saepe facilis.
+					</p>
+					<img src="../images/1.jpg"/>
+				</div>
+
+			</div>
+
+		</div>
+		<script src="../js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				var widget = $('.tabs-vertical');
+
+				var tabs = widget.find('ul a'),
+					content = widget.find('.tabs-content-placeholder > div');
+
+				tabs.on('click', function(e) {
+
+					e.preventDefault();
+
+					// Get the data-index attribute, and show the matching content div
+
+					var index = $(this).data('index');
+
+					tabs.removeClass('tab-active');
+					content.removeClass('tab-content-active');
+
+					$(this).addClass('tab-active');
+					content.eq(index).addClass('tab-content-active');
+
+				});
+
+			});
+		</script>
+	</body>
+
+</html>

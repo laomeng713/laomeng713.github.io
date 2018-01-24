@@ -18,7 +18,7 @@
 					<a href="demo.html">个人作品</a>
 				</li>
 				<li>
-					<a href="problem.html">小小经验</a>
+					<a href="problemIndex.html">小小经验</a>
 				</li>
 				<li>
 					<a href="dzw.html">爱豆日记</a>
@@ -31,11 +31,6 @@
 		</div>
 		<!--banner展示-->
 		<div class="header-background"></div>
-		<div class="title">
-			<h1>
-				欢迎来到改改的世界
-			</h1>
-		</div>
 		<div class="intro-box clearfloat">
 			<header>
 				<h3>交头接耳区</h3>
@@ -79,6 +74,31 @@
 
 			</div>
 		</div>
+		<!--footer-->
+		<div class="footer" style="text-align: center;margin-top: 20px;padding:5px;color: #707070;background-color: #303030;">
+			<span>
+				北京改改家科技股份有限公司&nbsp;&nbsp;&nbsp;&nbsp;©2006-2018&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;京ICP备1300****号
+			</span>
+			<br />
+			<span>
+				 *注：图片均来自网络。
+			</span>
+		</div>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function slide_nav() {
+				window.addEventListener("scroll", function() {
+					var height = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+					if(height >20) {
+						$('.index_nav').addClass('fixpos');
+					} else {
+						$('.index_nav').removeClass('fixpos');
+					}
+				})
+			}
+			slide_nav();
+		</script>
+
 	</body>
 
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<script src="js/sHover.min.js"></script>
+		<title>问题集锦</title>
+		<style>
+			.sHoverItem {
+				width: 260px;
+				height: 180px;
+				margin: 10px;
+				float: left;
+				font-family: "arial";
+				border: 6px solid #ccc;
+			}
+			
+			.sIntro {
+				background-color: #B4B4B4;
+				text-align: center;
+				font-family: "arial";
+			}
+			
+			.container {
+				width: 896px;
+				height: 636px;
+				border: solid 1px #ddd;
+				margin: 20px auto;
+				background: #FFFFFF;
+			}
+			
+			.sHoverItem img {
+				height: 180px;
+				width: 260px;
+			}
+			
+			.sIntro h2 {
+				font-family: "arial";
+				font-size: 36px;
+				text-align: center;
+				color: #FFF;
+				border-bottom: 1px dashed #fff;
+				margin: 30px 20px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="index_nav clearfloat">
+			<a href="index.html">花枝招展的猪</a>
+			<ul>
+				<li>
+					<a href="#">个人作品</a>
+				</li>
+				<li class="active">
+					<a href="problem.html">小小经验</a>
+				</li>
+				<li>
+					<a href="dzw.html">爱豆日记</a>
+				</li>
+				<li>
+					<a href="aboutMe.html">关于作者</a>
+				</li>
+
+			</ul>
+		</div>
+		<!-- /container -->
+		<div class="container">
+			<div id="item1" class="sHoverItem">
+				<a style="display: block;" href="problem/js.html">
+					<img id="img1" src="images/1.jpg">
+					<span id="intro1" class="sIntro">
+					<h2>JavaScript</h2>	
+					</span>
+				</a>
+
+			</div>
+			<div id="item2" class="sHoverItem">
+				<img src="images/2.jpg">
+				<span class="sIntro">
+					<h2>jQuery</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/3.jpg">
+				<span class="sIntro">
+					<h2>SQL</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/4.jpg">
+				<span class="sIntro">
+					<h2>Java</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/5.jpg">
+				<span class="sIntro">
+					<h2>WeX5</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/6.jpg">
+				<span class="sIntro">
+					<h2>空</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/7.jpg">
+				<span class="sIntro">
+					<h2>空</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/8.jpg">
+				<span class="sIntro">
+					<h2>空</h2>	
+				</span>
+			</div>
+			<div class="sHoverItem">
+				<img src="images/9.jpg">
+				<span class="sIntro">
+					<h2>空</h2>	
+				</span>
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				var a = new sHover("sHoverItem", "sIntro");
+				a.set({
+					slideSpeed: 5,
+					opacityChange: true,
+					opacity: 80
+				});
+			}
+		</script>
+	</body>
+
+</html>
